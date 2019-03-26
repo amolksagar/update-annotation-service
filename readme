@@ -1,0 +1,46 @@
+### Annotations used in GET-ANNOTATIONS-FOR-SPC:
+@SpringBootApplication : Indicates a configuration class that declares one or more @Bean methods and 
+also triggers auto-configuration and component scanning. This is a convenience annotation that 
+is equivalent to declaring @Configuration, @EnableAutoConfiguration and @ComponentScan
+
+@EnableDiscoveryClient : Registers this application as a client of the Eureka discovery server 
+i.e.Annotation to enable a DiscoveryClient implementation.
+
+@GetMapping : Used to decorate a function with a REST GET method.
+
+@ControllerAdvice : Specialization of @Component for classes that declare @ExceptionHandler, 
+ @InitBinder, or @ModelAttribute methods to be shared across multiple @Controller classes. 
+
+@RestController : A convenience annotation that is itself annotated with @Controller and @ResponseBody. 
+Types that carry this annotation are treated as controllers where @RequestMapping methods 
+assume @ResponseBody semantics by default. 
+
+@Autowired : Marks a constructor, field, setter method or config method as to be autowired by 
+Spring's dependency injection facilities
+
+@JpaRepository : JPA specific extension of org.springframework.data.repository.Repository.
+
+### Annotations used in NETFLIX-EUREKA-SERVER
+@EnableEurekaServer : Annotation to activate Eureka Server related configuration 
+EurekaServerAutoConfiguration
+
+### Annotations used in NETFLIX-ZUUL-API-GATEWAY-SERVER
+@EnableZuulProxy: Sets up a Zuul server end point and installs some reverse proxy filters in it,
+so it can forward requests to back end servers. The backend can be registered manually through 
+configuration or via DiscoveryClient.
+
+@Component: Indicates that an annotated class is a "component".Such classes are considered as 
+candidates for auto-detection when using annotation-based configuration and classpath scanning. 
+
+### Annotations used for SPRING-CLOUD-CONFIG-SERVER
+@EnableConfigServer: Declarative configuration for an Eureka COnfiguration server
+
+### Annotations used for UPDATE-ANNOTATIONS-SERVICE
+@FeignClient : Annotation for interfaces declaring that a REST client with that interface should be 
+created (e.g. for autowiring into another component). If ribbon is available it will be used
+ to load balance the backend requests, and the load balancer can be configured 
+ using a @RibbonClient with the same name (i.e. value) as the feign client.
+ 
+ @RibbonClient : Declarative configuration for a ribbon client. Add this annotation to any 
+ @Configuration and then inject a SpringClientFactory to access the client that is created.
+ 
